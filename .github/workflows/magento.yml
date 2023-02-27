@@ -12,6 +12,7 @@ jobs:
 
       - name: 'Install fresh Magento'
         uses: MAD-I-T/magento-actions@master
+      
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
