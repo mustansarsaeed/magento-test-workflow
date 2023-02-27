@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: 'magento install & push'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: 'Install fresh Magento'
         uses: MAD-I-T/magento-actions@master
