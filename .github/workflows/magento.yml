@@ -1,0 +1,19 @@
+name: Magneto CI
+
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: 'magento install & push'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 'Install fresh Magento'
+        uses: MAD-I-T/magento-actions@master
+        env:
+          COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
+        with:
+          process: 'create project'
+          magento_version: 2.4.5-p1
